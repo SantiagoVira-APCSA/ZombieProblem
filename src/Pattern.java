@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Pattern {
+    private static final int WIN_TIME = 20;
     private ArrayList<PersonGroup> moves;
     private PersonGroup people;
 
@@ -58,7 +59,7 @@ public class Pattern {
         for (PersonGroup move : moves) {
             sum += move.getCrossTime();
         }
-        return sum <= 17;
+        return sum <= WIN_TIME;
     }
 
     public boolean isValid() {
